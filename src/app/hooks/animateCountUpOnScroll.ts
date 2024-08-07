@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"; 
 
-export default function animateCountUpOnScroll (){
+export default function AnimateCountUpOnScroll (){
     
 const isBrowser = typeof window !== `undefined`
 const [scrollPosition, setScrollPosition] = useState(0);

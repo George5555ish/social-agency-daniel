@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import CountUp, { useCountUp } from "react-countup";
-import animateCountUpOnScroll from "./hooks/animateCountUpOnScroll";
+import AnimateCountUpOnScroll from "./hooks/AnimateCountUpOnScroll";
 import { Calendar, DollarSign, Globe } from "react-feather";
 import IsotopeLayout from "./components/IsotopeComp";
 import Lenis from "@studio-freight/lenis";
@@ -13,7 +13,7 @@ export default function Home() {
 
   let Isotope;
   const ANIMATION_DELAY = 2000;
-  const { animateNumbers } = animateCountUpOnScroll();
+  const { animateNumbers } = AnimateCountUpOnScroll();
   const countUpRef = useRef(null);
   // Ref of isotope container
   // Ref to store the isotope object
