@@ -40,7 +40,6 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    // if (typeof window === "undefined") return;
 
     // load Isotope
     Isotope = loadIsotope();
