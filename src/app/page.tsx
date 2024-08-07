@@ -8,7 +8,11 @@ import Lenis from "@studio-freight/lenis";
 import Img from "./components/Img";
 export default function Home() {
   useEffect(() => {
-    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+
+    if (window !== undefined) {
+
+      require("bootstrap/dist/js/bootstrap.bundle.min.js");
+    }
   }, []);
 
   let Isotope;

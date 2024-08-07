@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Isotope from "isotope-layout";
 import Img from "./Img";
@@ -386,7 +387,7 @@ const IsotopeLayout = () => {
                     /> */}
                          <Img   src="assets/img/portfolio/branding-3.jpg"/>
                     <div className="portfolio-info">
-                      <h4>Branding 3</h4>
+                      <h4>Branding 344</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
                       <a
                         href="assets/img/portfolio/branding-3.jpg"
