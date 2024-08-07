@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import "./main.css";
+ 
+require("assets/vendor/isotope-layout/isotope.pkgd.min.js")
+require("assets/vendor/swiper/swiper-bundle.min.js")
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  if (typeof window === 'object'){
-    require("assets/vendor/isotope-layout/isotope.pkgd.min.js")
-    require("assets/vendor/swiper/swiper-bundle.min.js")
-  }
+
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
