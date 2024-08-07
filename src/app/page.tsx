@@ -287,21 +287,21 @@ export default function Home() {
                     <i className="bi bi-diagram-3"></i>
                     <div>
                       <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                      <p>'100% would work again.'</p>
+                      <p>100% would work again.</p>
                     </div>
                   </li>
                   <li>
                     <i className="bi bi-fullscreen-exit"></i>
                     <div>
                       <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                      <p>'100% would work again.'</p>
+                      <p>100% would work again.</p>
                     </div>
                   </li>
                   <li>
                     <i className="bi bi-broadcast"></i>
                     <div>
                       <h5>Voluptatem et qui exercitationem</h5>
-                      <p>'100% would work again.'</p>
+                      <p>100% would work again.</p>
                     </div>
                   </li>
                 </ul>
@@ -373,6 +373,30 @@ export default function Home() {
                 </div>
               </div>
               {/* <!-- End Service Item --> */}
+
+              <div
+                className="col-lg-4 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <div className="service-item position-relative">
+                  <div className="icon">
+                    {/* <i
+                      className="bi bi-chat-text"
+                      style={{ color: "#20c997" }}
+                    ></i> */}
+                    <Globe color={"magenta"} size={50} />
+                  </div>
+                  <a href="/service/seo" className="stretched-link">
+                    <h3>SEO </h3>
+                  </a>
+                  <p>
+                    Work with us and rank at the top of the Google search
+                    results, ensuring customers stumble on your business and
+                    outshine the competition
+                  </p>
+                </div>
+              </div>
 
               <div
                 className="col-lg-4 col-md-6"

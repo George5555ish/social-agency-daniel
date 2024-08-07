@@ -1,5 +1,6 @@
 import React from "react";
 import Isotope from "isotope-layout";
+import Img from "./Img";
 
 const IsotopeLayout = () => {
   // init one ref to store the future isotope object
@@ -68,11 +69,12 @@ const IsotopeLayout = () => {
               >
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item product filter-app">
                   <div className="portfolio-content h-100">
-                    <img
+                    <Img src="assets/img/portfolio/app-1.jpg" />
+                    {/* <img
                       src="assets/img/portfolio/app-1.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
                     <div className="portfolio-info">
                       <h4>App 1</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -98,11 +100,12 @@ const IsotopeLayout = () => {
 
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item web-design filter-product">
                   <div className="portfolio-content h-100">
-                    <img
+                    {/* <img
                       src="assets/img/portfolio/product-1.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
+                                   <Img   src="assets/img/portfolio/product-1.jpg" />
                     <div className="portfolio-info">
                       <h4>Web Design 1</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -128,11 +131,12 @@ const IsotopeLayout = () => {
 
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item product filter-branding">
                   <div className="portfolio-content h-100">
-                    <img
+                    {/* <img
                       src="assets/img/portfolio/branding-1.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
+                               <Img  src="assets/img/portfolio/branding-1.jpg"/>
                     <div className="portfolio-info">
                       <h4>Branding 1</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -158,11 +162,12 @@ const IsotopeLayout = () => {
 
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item web-design filter-books">
                   <div className="portfolio-content h-100">
-                    <img
+                    {/* <img
                       src="assets/img/portfolio/books-1.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
+                    <Img src="assets/img/portfolio/books-1.jpg" />
                     <div className="portfolio-info">
                       <h4>Web Design 2</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -188,11 +193,12 @@ const IsotopeLayout = () => {
 
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item web-design filter-app">
                   <div className="portfolio-content h-100">
-                    <img
+                    {/* <img
                       src="assets/img/portfolio/app-2.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
+                       <Img src="assets/img/portfolio/app-2.jpg" />
                     <div className="portfolio-info">
                       <h4>Web Design 2</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -218,11 +224,12 @@ const IsotopeLayout = () => {
 
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item product filter-product">
                   <div className="portfolio-content h-100">
-                    <img
+                    {/* <img
                       src="assets/img/portfolio/product-2.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
+                     <Img src="assets/img/portfolio/product-2.jpg" />
                     <div className="portfolio-info">
                       <h4>Product 2</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -248,11 +255,12 @@ const IsotopeLayout = () => {
 
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item product filter-branding">
                   <div className="portfolio-content h-100">
-                    <img
+                    {/* <img
                       src="assets/img/portfolio/branding-2.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
+                        <Img src="assets/img/portfolio/branding-2.jpg" />
                     <div className="portfolio-info">
                       <h4>Branding 2</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -278,11 +286,12 @@ const IsotopeLayout = () => {
 
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item branding filter-books">
                   <div className="portfolio-content h-100">
-                    <img
+                    {/* <img
                       src="assets/img/portfolio/books-2.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
+                      <Img src="assets/img/portfolio/books-2.jpg" />
                     <div className="portfolio-info">
                       <h4>Books 2</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -308,11 +317,12 @@ const IsotopeLayout = () => {
 
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item branding filter-app">
                   <div className="portfolio-content h-100">
-                    <img
+                    {/* <img
                       src="assets/img/portfolio/app-3.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
+                        <Img  src="assets/img/portfolio/app-3.jpg" />
                     <div className="portfolio-info">
                       <h4>App 3</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -338,11 +348,12 @@ const IsotopeLayout = () => {
 
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item web-design filter-product">
                   <div className="portfolio-content h-100">
-                    <img
+                    {/* <img
                       src="assets/img/portfolio/product-3.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
+                     <Img   src="assets/img/portfolio/product-3.jpg"/>
                     <div className="portfolio-info">
                       <h4>Web Design 2</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -368,11 +379,12 @@ const IsotopeLayout = () => {
 
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item product filter-branding">
                   <div className="portfolio-content h-100">
-                    <img
+                    {/* <img
                       src="assets/img/portfolio/branding-3.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
+                         <Img   src="assets/img/portfolio/branding-3.jpg"/>
                     <div className="portfolio-info">
                       <h4>Branding 3</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -398,11 +410,12 @@ const IsotopeLayout = () => {
 
                 <div className="col-lg-4 col-md-6 portfolio-item filter-item branding filter-books">
                   <div className="portfolio-content h-100">
-                    <img
+                    {/* <img
                       src="assets/img/portfolio/books-3.jpg"
                       className="img-fluid"
                       alt=""
-                    />
+                    /> */}
+                      <Img   src="assets/img/portfolio/books-3.jpg"/>
                     <div className="portfolio-info">
                       <h4>Books 3</h4>
                       <p>Lorem ipsum, dolor sit amet consectetur</p>
