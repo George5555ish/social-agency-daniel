@@ -5,6 +5,7 @@ import CountUp, { useCountUp } from "react-countup";
 import { Calendar, DollarSign, Globe } from "react-feather";
 import IsotopeLayout from "./components/IsotopeComp";
 import Lenis from "@studio-freight/lenis";
+import Img from "./components/Img";
 export default function Home() {
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
@@ -58,11 +59,12 @@ export default function Home() {
       >
         <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
           <a href="index.html" className="logo d-flex align-items-center">
-            <img
+            {/* <img
               src="assets/img/social-agency-logo.svg"
               alt=""
               style={{ transform: "scale(3)", marginLeft: '30px' }}
-            />
+            /> */}
+            <Img  src="assets/img/social-agency-logo.svg"/>
             {/* <!-- Uncomment the line below if you also wish to use text logo --> */}
             {/* <!-- <h1 className="sitename">Butterfly</h1>  --> */}
           </a>
@@ -163,11 +165,12 @@ export default function Home() {
                 data-aos="zoom-out"
                 data-aos-delay="100"
               >
-                <img
+                {/* <img
                   src="assets/img/hero-img.png"
                   className="img-fluid animated"
                   alt=""
-                />
+                /> */}
+                 <Img     src="assets/img/hero-img.png" />
                 {/* <img
                   src="assets/img/bg-main.JPG"
                   className="img-fluid animated"
@@ -180,7 +183,8 @@ export default function Home() {
         {/* <!-- /Hero Section --> */}
         {/* <!-- Stats Section --> */}
         <section id="stats" className="stats section light-background">
-          <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in" />
+          {/* <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in" /> */}
+          <Img   src="assets/img/stats-bg.jpg" />
 
           <div
             className="container position-relative"
@@ -258,11 +262,12 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <img
+                {/* <img
                   src="assets/img/bg-main.JPG"
                   className="img-fluid animated"
                   alt=""
-                />
+                /> */}
+                 <Img    src="assets/img/bg-main.JPG"/>
                 {/* <a
                   href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
                   className="glightbox pulsating-play-btn"
@@ -440,22 +445,23 @@ export default function Home() {
           className="testimonials section dark-background"
         >
           
-          <img
+          {/* <img
             src="assets/img/testimonials-bg.jpg"
             className="testimonials-bg"
             alt=""
-          />
-
+          /> */}
+  <Img src="assets/img/testimonials-bg.jpg"/>
           <div className="container" data-aos="fade-up" data-aos-delay="100">
             <div className="swiper init-swiper">
               <div className="swiper-wrapper">
                 <div className="swiper-slide">
                   <div className="testimonial-item">
-                    <img
+                    {/* <img
                       src="assets/img/testimonials/testimonials-1.jpg"
                       className="testimonial-img"
                       alt=""
-                    />
+                    /> */}
+                     <Img src="assets/img/testimonials/testimonials-1.jpg"/>
                     <h3>Saul Goodman</h3>
                     <h4>Ceo &amp; Founder</h4>
                     <div className="stars">
@@ -481,11 +487,12 @@ export default function Home() {
 
                 <div className="swiper-slide">
                   <div className="testimonial-item">
-                    <img
+                    {/* <img
                       src="assets/img/testimonials/testimonials-2.jpg"
                       className="testimonial-img"
                       alt=""
-                    />
+                    /> */}
+                    <Img src="assets/img/testimonials/testimonials-2.jpg"/>
                     <h3>Sara Wilsson</h3>
                     <h4>Designer</h4>
                     <div className="stars">
@@ -511,11 +518,12 @@ export default function Home() {
 
                 <div className="swiper-slide">
                   <div className="testimonial-item">
-                    <img
+                    {/* <img
                       src="assets/img/testimonials/testimonials-3.jpg"
                       className="testimonial-img"
                       alt=""
-                    />
+                    /> */}
+                        <Img src="assets/img/testimonials/testimonials-3.jpg"/>
                     <h3>Jena Karlis</h3>
                     <h4>Store Owner</h4>
                     <div className="stars">
@@ -540,12 +548,8 @@ export default function Home() {
                 {/* <!-- End testimonial item --> */}
 
                 <div className="swiper-slide">
-                  <div className="testimonial-item">
-                    <img
-                      src="assets/img/testimonials/testimonials-4.jpg"
-                      className="testimonial-img"
-                      alt=""
-                    />
+                  <div className="testimonial-item"> 
+                        <Img src="assets/img/testimonials/testimonials-4.jpg"/>
                     <h3>Matt Brandon</h3>
                     <h4>Freelancer</h4>
                     <div className="stars">
@@ -571,11 +575,7 @@ export default function Home() {
 
                 <div className="swiper-slide">
                   <div className="testimonial-item">
-                    <img
-                      src="assets/img/testimonials/testimonials-5.jpg"
-                      className="testimonial-img"
-                      alt=""
-                    />
+                  <Img src="assets/img/testimonials/testimonials-5.jpg"/>
                     <h3>John Larson</h3>
                     <h4>Entrepreneur</h4>
                     <div className="stars">
@@ -624,12 +624,8 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <div className="member">
-                  <img
-                    src="assets/img/team/team-1.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                <div className="member"> 
+                      <Img src="assets/img/team/team-1.jpg"/>
                   <div className="member-info">
                     <div className="member-info-content">
                       <h4>Walter White</h4>
@@ -659,12 +655,8 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <div className="member">
-                  <img
-                    src="assets/img/team/team-2.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                <div className="member"> 
+                          <Img src="assets/img/team/team-2.jpg"/>
                   <div className="member-info">
                     <div className="member-info-content">
                       <h4>Sarah Jhonson</h4>
@@ -695,11 +687,7 @@ export default function Home() {
                 data-aos-delay="300"
               >
                 <div className="member">
-                  <img
-                    src="assets/img/team/team-3.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                <Img src="assets/img/team/team-3.jpg"/>
                   <div className="member-info">
                     <div className="member-info-content">
                       <h4>William Anderson</h4>
@@ -730,11 +718,7 @@ export default function Home() {
                 data-aos-delay="400"
               >
                 <div className="member">
-                  <img
-                    src="assets/img/team/team-4.jpg"
-                    className="img-fluid"
-                    alt=""
-                  />
+                <Img src="assets/img/team/team-4.jpg"/>
                   <div className="member-info">
                     <div className="member-info-content">
                       <h4>Amanda Jepson</h4>
@@ -787,12 +771,8 @@ export default function Home() {
                     href="assets/img/gallery/gallery-1.jpg"
                     className="glightbox"
                     data-gallery="images-gallery"
-                  >
-                    <img
-                      src="assets/img/gallery/gallery-1.jpg"
-                      alt=""
-                      className="img-fluid"
-                    />
+                  > 
+                   <Img  src="assets/img/gallery/gallery-1.jpg"/>
                   </a>
                 </div>
               </div>
@@ -804,12 +784,8 @@ export default function Home() {
                     href="assets/img/gallery/gallery-2.jpg"
                     className="glightbox"
                     data-gallery="images-gallery"
-                  >
-                    <img
-                      src="assets/img/gallery/gallery-2.jpg"
-                      alt=""
-                      className="img-fluid"
-                    />
+                  > 
+                   <Img  src="assets/img/gallery/gallery-2.jpg"/>
                   </a>
                 </div>
               </div>
@@ -822,11 +798,7 @@ export default function Home() {
                     className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img
-                      src="assets/img/gallery/gallery-3.jpg"
-                      alt=""
-                      className="img-fluid"
-                    />
+                          <Img  src="assets/img/gallery/gallery-3.jpg"/>
                   </a>
                 </div>
               </div>
@@ -839,11 +811,7 @@ export default function Home() {
                     className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img
-                      src="assets/img/gallery/gallery-4.jpg"
-                      alt=""
-                      className="img-fluid"
-                    />
+                            <Img  src="assets/img/gallery/gallery-4.jpg"/>
                   </a>
                 </div>
               </div>
@@ -856,11 +824,7 @@ export default function Home() {
                     className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img
-                      src="assets/img/gallery/gallery-5.jpg"
-                      alt=""
-                      className="img-fluid"
-                    />
+                            <Img  src="assets/img/gallery/gallery-5.jpg"/>
                   </a>
                 </div>
               </div>
@@ -873,11 +837,7 @@ export default function Home() {
                     className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img
-                      src="assets/img/gallery/gallery-6.jpg"
-                      alt=""
-                      className="img-fluid"
-                    />
+                           <Img  src="assets/img/gallery/gallery-6.jpg"/>
                   </a>
                 </div>
               </div>
@@ -890,11 +850,7 @@ export default function Home() {
                     className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img
-                      src="assets/img/gallery/gallery-7.jpg"
-                      alt=""
-                      className="img-fluid"
-                    />
+                            <Img  src="assets/img/gallery/gallery-7.jpg"/>
                   </a>
                 </div>
               </div>
@@ -907,11 +863,7 @@ export default function Home() {
                     className="glightbox"
                     data-gallery="images-gallery"
                   >
-                    <img
-                      src="assets/img/gallery/gallery-8.jpg"
-                      alt=""
-                      className="img-fluid"
-                    />
+                          <Img  src="assets/img/gallery/gallery-8.jpg"/>
                   </a>
                 </div>
               </div>
