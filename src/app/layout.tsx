@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
-import "./main.css";
- 
-require("assets/vendor/isotope-layout/isotope.pkgd.min.js")
-require("assets/vendor/swiper/swiper-bundle.min.js")
+import "./main.css"; 
 
 const inter = Inter({ subsets: ["latin"] });
 
