@@ -24,18 +24,7 @@ export default function Home() {
   const [showPreloader, setShowPreloader] = useState(true)
   const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
   const loadIsotope = () => require("isotope-layout");
-  const { start, pauseResume, reset, update } = useCountUp({
-    ref: countUpRef,
-    start: 0,
-    end: 1234567,
-    delay: 1000,
-    duration: 5,
-    onReset: () => console.log("Resetted!"),
-    onUpdate: () => console.log("Updated!"),
-    onPauseResume: () => console.log("Paused or resumed!"),
-    onStart: ({ pauseResume }) => console.log(pauseResume),
-    onEnd: ({ pauseResume }) => console.log(pauseResume),
-  });
+ 
   useEffect(() => {
     const lenis = new Lenis();
 
