@@ -201,7 +201,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center">
               <div className="bg-none p-4" data-aos="fade-up">
                 <h2 className="text-center sm:text-left" style={{}}>
-                  Let's help you grow online!
+                 Let{"'"}s help you grow online!
                 </h2>
                 <p className="text-center">
                   We are a UK based social media agency for restaurants, hotels,
