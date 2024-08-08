@@ -176,11 +176,12 @@ export default function Home() {
             autoPlay={true}
             loop={true}
             preload="none"
-            style={{
-              border: "1px solid green",
+            style={{ 
+              maxHeight: '1000px',
+              objectFit: 'cover'
             }}
           >
-            <source src="/assets/video/intro-video.mp4" type="video/mp4" />
+            <source src="/assets/video/intro-video.mp4" className="w-full object-cover" type="video/mp4" />
             <track
               src="/path/to/captions.vtt"
               kind="subtitles"
@@ -199,8 +200,8 @@ export default function Home() {
         >
           <div className="container ">
             <div className="flex flex-col sm:flex-row items-center justify-center">
-              <div className="bg-none p-4" data-aos="fade-up">
-                <h2 className="text-center sm:text-left" style={{}}>
+              <div className="bg-none pr-24" data-aos="fade-up">
+                <h2 className="text-center sm:text-left">
                  Let{"'"}s help you grow online!
                 </h2>
                 <p className="text-center">
@@ -208,10 +209,10 @@ export default function Home() {
                   cafes and brands. We amplify your voice and build your brand.
                   Let us take social media off your plate.
                 </p>
-                <div className="pb-8 mt-4 justify-content-center justify-content-md-start">
+                <div className="pb-8 mt-4 flex justify-center items-center">
                   <a
                     href="#contact"
-                    className=" flex items-center justify-center w-full border text-center font-bold text-2xl bg-sky-500 text-white"
+                    className="p-4 rounded-xl shadow-lg items-center justify-center border text-center font-bold text-2xl bg-sky-500 text-white"
                   >
                     Get Started
                   </a>
@@ -223,7 +224,7 @@ export default function Home() {
                 data-aos-delay="100"
               >
                 <img
-                  src="assets/img/cocktail.png"
+                  src="assets/img/cocktail.PNG"
                   className="img-fluid animated"
                   alt=""
                 />
@@ -406,7 +407,7 @@ We are interested in putting your brand in the spotlight and helping you reach y
           {/* <!-- End Section Title --> */}
 
           <div className="container" data-aos="fade-up" data-aos-delay="100">
-            <div
+            {/* <div
               className="mb-4 border border-sky-200"
               data-aos="fade-up"
               data-aos-delay="200"
@@ -419,7 +420,7 @@ We are interested in putting your brand in the spotlight and helping you reach y
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-[300px]"
               ></iframe>
-            </div>
+            </div> */}
             {/* <!-- End Google Maps --> */}
 
             <div className="row gy-4">
@@ -432,7 +433,7 @@ We are interested in putting your brand in the spotlight and helping you reach y
                   <i className="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
                     <h3>Address</h3>
-                    <p>93 Beaumont Drive, Gravesend</p>
+                    <p>London, UK</p>
                   </div>
                 </div>
                 {/* <!-- End Info Item --> */}
@@ -466,7 +467,7 @@ We are interested in putting your brand in the spotlight and helping you reach y
 
               <div className="col-lg-8">
                 <form
-                  action="forms/contact.php"
+                  action="mailto:esthermbajiaku@gmail.com"
                   method="post"
                   className="php-email-form"
                   data-aos="fade-up"

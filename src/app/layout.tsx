@@ -7,8 +7,8 @@ import "./main.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Huxley Web Design",
-  description: "Huxley Web Design Agency",
+  title: "The Social Agency",
+  description: "Hospitality Social Media Agency",
 };
 
 export default function RootLayout({

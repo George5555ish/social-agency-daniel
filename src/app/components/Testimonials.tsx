@@ -7,7 +7,7 @@ function Testimonials() {
     {/* <!-- Section Title --> */}
     <div className="container section-title" data-aos="fade-up">
       <h2>Services</h2>
-      <p>We offer the following services to the best of our ability</p>
+      {/* <p>We offer the following services to the best of our ability</p> */}
     </div>
     {/* <!-- End Section Title --> */}
 
@@ -27,7 +27,7 @@ function Testimonials() {
               <DollarSign color={"#0dcaf0"} size={50} />
             </div>
             <a  className="stretched-link">
-              <h3>Web Site</h3>
+              <h3>Web Development</h3>
             </a>
             <p>
             Website is the digital forefront of your business. Let us design an on-brand captivating website for you.
