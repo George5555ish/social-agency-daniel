@@ -1,22 +1,25 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import CountUp, { useCountUp } from "react-countup"; 
+import CountUp, { useCountUp } from "react-countup";
 import { Calendar, DollarSign, Globe } from "react-feather";
 import IsotopeLayout from "./components/IsotopeComp";
 import Lenis from "@studio-freight/lenis";
 import Img from "./components/Img";
+import Testimonials from "./components/Testimonials";
+import TestimonialsMain from "./components/TestimonialsMain";
+import Team from "./components/Team";
+import Gallery from "./components/Gallery";
+const loadIsotope = () => require("isotope-layout");
 export default function Home() {
   useEffect(() => {
-
     // if (window !== undefined) {
-
     //   require("bootstrap/dist/js/bootstrap.bundle.min.js");
     // }
   }, []);
 
   let Isotope;
-  const ANIMATION_DELAY = 2000; 
+  const ANIMATION_DELAY = 2000;
   const countUpRef = useRef(null);
   // Ref of isotope container
   // Ref to store the isotope object
@@ -24,10 +27,9 @@ export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isotopeRef = useRef();
 
-  const [showPreloader, setShowPreloader] = useState(true)
+  const [showPreloader, setShowPreloader] = useState(true);
   const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-  const loadIsotope = () => require("isotope-layout");
- 
+
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -39,16 +41,15 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
   useEffect(() => {
-     setTimeout(() => {
-      setShowPreloader(false)
-     },ANIMATION_DELAY);
+    setTimeout(() => {
+      setShowPreloader(false);
+    }, ANIMATION_DELAY);
   }, []);
 
   useEffect(() => {
-
     // load Isotope
-    Isotope = loadIsotope();
 
+    Isotope = loadIsotope();
     // use Isotope
     isotopeRef.current = new Isotope(containerRef.current, {
       itemSelector: ".my-item",
@@ -63,12 +64,12 @@ export default function Home() {
       >
         <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
           <a href="index.html" className="logo d-flex align-items-center">
-            {/* <img
+            <img
               src="assets/img/social-agency-logo.svg"
               alt=""
-              style={{ transform: "scale(3)", marginLeft: '30px' }}
-            /> */}
-            <Img  src="assets/img/social-agency-logo.svg"/>
+              style={{ transform: "scale(3)", marginLeft: "30px" }}
+            />
+            {/* <Img  src="assets/img/social-agency-logo.svg"/> */}
             {/* <!-- Uncomment the line below if you also wish to use text logo --> */}
             {/* <!-- <h1 className="sitename">Butterfly</h1>  --> */}
           </a>
@@ -86,13 +87,13 @@ export default function Home() {
               <li>
                 <a href="#services">Services</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#portfolio">Portfolio</a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="#team">Team</a>
-              </li>
-              <li className="dropdown">
+              </li> */}
+              {/* <li className="dropdown">
                 <a href="#">
                   <span>Dropdown</span>{" "}
                   <i className="bi bi-chevron-down toggle-dropdown"></i>
@@ -134,9 +135,9 @@ export default function Home() {
                     <a href="#">Dropdown 4</a>
                   </li>
                 </ul>
-              </li>
+              </li> */}
               <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact">Contact Us</a>
               </li>
             </ul>
             <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -146,20 +147,72 @@ export default function Home() {
 
       <main className="main">
         {/* <!-- Hero Section --> */}
-        <section id="hero" className="hero section light-background">
-          <div className="container">
-            <div className="row gy-4">
-              <div
-                className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-md-start"
-                data-aos="fade-up"
-              >
-                <h2>CREATING WEBSITES THAT MAKE YOU STOP &amp; STARE</h2>
-                <p>
-                  We are team of talented designers making websites with
-                  Bootstrap
+        <div className="h-[100vh] relative">
+          <div
+            className="bg-none absolute top-0 left-0 w-full p-4 text-center justify-center align-center"
+            data-aos="fade-up"
+          >
+           <div className="flex align-center justify-center">
+           <img
+              src="assets/img/social-agency-logo.svg"
+              width={'800px'}
+              height={'800px'}
+              alt=""
+              // style={{ marginLeft: "30px" }}
+            />
+           </div>
+            <h2
+              className=""
+              style={{ fontSize: "50px", fontFamily: 'serif', fontWeight: "bold", color: "#fff" }}
+            >
+              HOSPITALITY SOCIAL MEDIA AGENCY
+            </h2>
+          </div>
+          <video
+            width="100%"
+            height="100%"
+            controls={false}
+            muted={true}
+            autoPlay={true}
+            loop={true}
+            preload="none"
+            style={{
+              border: "1px solid green",
+            }}
+          >
+            <source src="/assets/video/intro-video.mp4" type="video/mp4" />
+            <track
+              src="/path/to/captions.vtt"
+              kind="subtitles"
+              srcLang="en"
+              label="English"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <section
+          id="hero"
+          className="hero section"
+          style={{
+            backgroundImage: "url()",
+          }}
+        >
+          <div className="container ">
+            <div className="flex flex-col sm:flex-row items-center justify-center">
+              <div className="bg-none p-4" data-aos="fade-up">
+                <h2 className="text-center sm:text-left" style={{}}>
+                  Let's help you grow online!
+                </h2>
+                <p className="text-center">
+                  We are a UK based social media agency for restaurants, hotels,
+                  cafes and brands. We amplify your voice and build your brand.
+                  Let us take social media off your plate.
                 </p>
-                <div className="d-flex mt-4 justify-content-center justify-content-md-start">
-                  <a href="#about" className="cta-btn">
+                <div className="pb-8 mt-4 justify-content-center justify-content-md-start">
+                  <a
+                    href="#contact"
+                    className=" flex items-center justify-center w-full border text-center font-bold text-2xl bg-sky-500 text-white"
+                  >
                     Get Started
                   </a>
                 </div>
@@ -169,12 +222,12 @@ export default function Home() {
                 data-aos="zoom-out"
                 data-aos-delay="100"
               >
-                {/* <img
-                  src="assets/img/hero-img.png"
+                <img
+                  src="assets/img/cocktail.png"
                   className="img-fluid animated"
                   alt=""
-                /> */}
-                 <Img     src="assets/img/hero-img.png" />
+                />
+                {/* <Img src="assets/img/hero-img.png" /> */}
                 {/* <img
                   src="assets/img/bg-main.JPG"
                   className="img-fluid animated"
@@ -188,7 +241,7 @@ export default function Home() {
         {/* <!-- Stats Section --> */}
         <section id="stats" className="stats section light-background">
           {/* <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in" /> */}
-          <Img   src="assets/img/stats-bg.jpg" />
+          <Img src="assets/img/stats-bg.jpg" />
 
           <div
             className="container position-relative"
@@ -204,7 +257,7 @@ export default function Home() {
                     data-purecounter-duration="1"
                     className="purecounter"
                   ></span> */}
-                  <CountUp end={20} suffix="+" />
+                  <CountUp end={10} suffix="+" />
                   <p className="font-bold text-2xl font-sans">Clients</p>
                 </div>
               </div>
@@ -218,7 +271,7 @@ export default function Home() {
                     data-purecounter-duration="1"
                     className="purecounter"
                   ></span> */}
-                  <CountUp end={100} suffix="+" />
+                  <CountUp end={50} suffix="+" />
                   <p>Projects</p>
                 </div>
               </div>
@@ -233,7 +286,7 @@ export default function Home() {
                     className="purecounter"
                   ></span> */}
 
-                  <CountUp end={500} />
+                  <CountUp end={500} suffix="+"/>
                   <p>Hours Of Support</p>
                 </div>
               </div>
@@ -271,7 +324,7 @@ export default function Home() {
                   className="img-fluid animated"
                   alt=""
                 /> */}
-                 <Img    src="assets/img/bg-main.JPG"/>
+                <Img src="assets/img/bg-main.JPG" />
                 {/* <a
                   href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
                   className="glightbox pulsating-play-btn"
@@ -283,14 +336,13 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h3>About Us</h3>
-                <p>
-                  We believe in excellence in whatever field we put our minds
-                  to. Working with past clients, we have always prioritized
-                  customer satisfaction, and we have the testimonials to prove
-                  it.
+                <h3>More About Us</h3>
+                <p className="pt-4">
+                Social media has completely transformed our approach to advertising. 
+We have seen the media shift from traditional ways of brand building to digital first strategies. 
+We are interested in putting your brand in the spotlight and helping you reach your target audience on all platforms! 
                 </p>
-                <ul>
+                {/* <ul>
                   <li>
                     <i className="bi bi-diagram-3"></i>
                     <div>
@@ -312,7 +364,7 @@ export default function Home() {
                       <p>100% would work again.</p>
                     </div>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
           </div>
@@ -320,561 +372,25 @@ export default function Home() {
         {/* <!-- /About Section --> */}
 
         {/* <!-- Services Section --> */}
-        <section id="services" className="services section light-background">
-          {/* <!-- Section Title --> */}
-          <div className="container section-title" data-aos="fade-up">
-            <h2>Services</h2>
-            <p>We offer the following services to the best of our ability</p>
-          </div>
-          {/* <!-- End Section Title --> */}
-
-          <div className="container">
-            <div className="row gy-4">
-              <div
-                className="col-lg-4 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                <div className="service-item  position-relative">
-                  <div className="icon">
-                    {/* <i
-                      className="bi bi-cash-stack"
-                      style={{ color: "#0dcaf0" }}
-                    ></i> */}
-                    <DollarSign color={"#0dcaf0"} size={50} />
-                  </div>
-                  <a href="/service/web-design" className="stretched-link">
-                    <h3>Web Design</h3>
-                  </a>
-                  <p>
-                    Provident nihil minus qui consequatur non omnis maiores. Eos
-                    accusantium minus dolores iure perferendis tempore et
-                    consequatur.
-                  </p>
-                </div>
-              </div>
-              {/* <!-- End Service Item --> */}
-
-              <div
-                className="col-lg-4 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div className="service-item position-relative">
-                  <div className="icon">
-                    {/* <i
-                      className="bi bi-calendar4-week"
-                      style={{ color: "#0dcaf0" }}
-                    ></i> */}
-                    <Calendar color={"#20c997"} size={50} />
-                  </div>
-                  <a
-                    href="/service/social-media-marketing"
-                    className="stretched-link"
-                  >
-                    <h3>Social Media Marketing</h3>
-                  </a>
-                  <p>
-                    Work with us and ensure your business gets the exposure it
-                    needs
-                  </p>
-                </div>
-              </div>
-              {/* <!-- End Service Item --> */}
-
-              <div
-                className="col-lg-4 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <div className="service-item position-relative">
-                  <div className="icon">
-                    {/* <i
-                      className="bi bi-chat-text"
-                      style={{ color: "#20c997" }}
-                    ></i> */}
-                    <Globe color={"magenta"} size={50} />
-                  </div>
-                  <a href="/service/seo" className="stretched-link">
-                    <h3>SEO </h3>
-                  </a>
-                  <p>
-                    Work with us and rank at the top of the Google search
-                    results, ensuring customers stumble on your business and
-                    outshine the competition
-                  </p>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-4 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <div className="service-item position-relative">
-                  <div className="icon">
-                    {/* <i
-                      className="bi bi-chat-text"
-                      style={{ color: "#20c997" }}
-                    ></i> */}
-                    <Globe color={"magenta"} size={50} />
-                  </div>
-                  <a href="/service/seo" className="stretched-link">
-                    <h3>SEO </h3>
-                  </a>
-                  <p>
-                    Work with us and rank at the top of the Google search
-                    results, ensuring customers stumble on your business and
-                    outshine the competition
-                  </p>
-                </div>
-              </div>
-              {/* <!-- End Service Item --> */}
-
-             
-            </div>
-          </div>
-        </section>
+        <Testimonials />
         {/* <!-- /Services Section --> */}
 
-        {/* <!-- Portfolio Section --> */} 
+        {/* <!-- Portfolio Section --> */}
 
         {/* <IsotopeLayout /> */}
         {/* <!-- /Portfolio Section --> */}
 
         {/* <!-- Testimonials Section --> */}
-      
-        <section
-          id="testimonials"
-          className="testimonials section dark-background"
-        >
-          
-          {/* <img
-            src="assets/img/testimonials-bg.jpg"
-            className="testimonials-bg"
-            alt=""
-          /> */}
-        <Img src="assets/img/testimonials-bg.jpg"/>
-          <div className="container" data-aos="fade-up" data-aos-delay="100">
-            <div className="swiper init-swiper">
-              <div className="swiper-wrapper">
-                <div className="swiper-slide">
-                  <div className="testimonial-item">
-                    {/* <img
-                      src="assets/img/testimonials/testimonials-1.jpg"
-                      className="testimonial-img"
-                      alt=""
-                    /> */}
-                     <Img src="assets/img/testimonials/testimonials-1.jpg"/>
-                    <h3>Saul Goodman</h3>
-                    <h4>Ceo &amp; Founder</h4>
-                    <div className="stars">
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                    </div>
-                    <p>
-                      <i className="bi bi-quote quote-icon-left"></i>
-                      <span>
-                        Proin iaculis purus consequat sem cure digni ssim donec
-                        porttitora entum suscipit rhoncus. Accusantium quam,
-                        ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                        risus at semper.
-                      </span>
-                      <i className="bi bi-quote quote-icon-right"></i>
-                    </p>
-                  </div>
-                </div>
-                {/* <!-- End testimonial item --> */}
 
-                <div className="swiper-slide">
-                  <div className="testimonial-item">
-                    {/* <img
-                      src="assets/img/testimonials/testimonials-2.jpg"
-                      className="testimonial-img"
-                      alt=""
-                    /> */}
-                    <Img src="assets/img/testimonials/testimonials-2.jpg"/>
-                    <h3>Sara Wilsson</h3>
-                    <h4>Designer</h4>
-                    <div className="stars">
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                    </div>
-                    <p>
-                      <i className="bi bi-quote quote-icon-left"></i>
-                      <span>
-                        Export tempor illum tamen malis malis eram quae irure
-                        esse labore quem cillum quid cillum eram malis quorum
-                        velit fore eram velit sunt aliqua noster fugiat irure
-                        amet legam anim culpa.
-                      </span>
-                      <i className="bi bi-quote quote-icon-right"></i>
-                    </p>
-                  </div>
-                </div>
-                {/* <!-- End testimonial item --> */}
-
-                <div className="swiper-slide">
-                  <div className="testimonial-item">
-                    {/* <img
-                      src="assets/img/testimonials/testimonials-3.jpg"
-                      className="testimonial-img"
-                      alt=""
-                    /> */}
-                        <Img src="assets/img/testimonials/testimonials-3.jpg"/>
-                    <h3>Jena Karlis</h3>
-                    <h4>Store Owner</h4>
-                    <div className="stars">
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                    </div>
-                    <p>
-                      <i className="bi bi-quote quote-icon-left"></i>
-                      <span>
-                        Enim nisi quem export duis labore cillum quae magna enim
-                        sint quorum nulla quem veniam duis minim tempor labore
-                        quem eram duis noster aute amet eram fore quis sint
-                        minim.
-                      </span>
-                      <i className="bi bi-quote quote-icon-right"></i>
-                    </p>
-                  </div>
-                </div>
-                {/* <!-- End testimonial item --> */}
-
-                <div className="swiper-slide">
-                  <div className="testimonial-item"> 
-                        <Img src="assets/img/testimonials/testimonials-4.jpg"/>
-                    <h3>Matt Brandon</h3>
-                    <h4>Freelancer</h4>
-                    <div className="stars">
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                    </div>
-                    <p>
-                      <i className="bi bi-quote quote-icon-left"></i>
-                      <span>
-                        Fugiat enim eram quae cillum dolore dolor amet nulla
-                        culpa multos export minim fugiat minim velit minim dolor
-                        enim duis veniam ipsum anim magna sunt elit fore quem
-                        dolore labore illum veniam.
-                      </span>
-                      <i className="bi bi-quote quote-icon-right"></i>
-                    </p>
-                  </div>
-                </div>
-                {/* <!-- End testimonial item --> */}
-
-                <div className="swiper-slide">
-                  <div className="testimonial-item">
-                  <Img src="assets/img/testimonials/testimonials-5.jpg"/>
-                    <h3>John Larson</h3>
-                    <h4>Entrepreneur</h4>
-                    <div className="stars">
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                    </div>
-                    <p>
-                      <i className="bi bi-quote quote-icon-left"></i>
-                      <span>
-                        Quis quorum aliqua sint quem legam fore sunt eram irure
-                        aliqua veniam tempor noster veniam enim culpa labore
-                        duis sunt culpa nulla illum cillum fugiat legam esse
-                        veniam culpa fore nisi cillum quid.
-                      </span>
-                      <i className="bi bi-quote quote-icon-right"></i>
-                    </p>
-                  </div>
-                </div>
-                {/* <!-- End testimonial item --> */}
-              </div>
-              <div className="swiper-pagination"></div>
-            </div>
-          </div>
-        </section>
+        {/* <TestimonialsMain /> */}
         {/* <!-- /Testimonials Section --> */}
 
         {/* <!-- Team Section --> */}
-        <section id="team" className="team section">
-          {/* <!-- Section Title --> */}
-          <div className="container section-title" data-aos="fade-up">
-            <h2>Team</h2>
-            <p>
-              Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-              consectetur velit
-            </p>
-          </div>
-          {/* <!-- End Section Title --> */}
-
-          <div className="container">
-            <div className="row gy-4">
-              <div
-                className="col-lg-3 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                <div className="member"> 
-                      <Img src="assets/img/team/team-1.jpg"/>
-                  <div className="member-info">
-                    <div className="member-info-content">
-                      <h4>Walter White</h4>
-                      <span>Chief Executive Officer</span>
-                      <div className="social">
-                        <a href="">
-                          <i className="bi bi-twitter-x"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-facebook"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-instagram"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-linkedin"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- End Team Member --> */}
-
-              <div
-                className="col-lg-3 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div className="member"> 
-                          <Img src="assets/img/team/team-2.jpg"/>
-                  <div className="member-info">
-                    <div className="member-info-content">
-                      <h4>Sarah Jhonson</h4>
-                      <span>Product Manager</span>
-                      <div className="social">
-                        <a href="">
-                          <i className="bi bi-twitter-x"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-facebook"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-instagram"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-linkedin"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- End Team Member --> */}
-
-              <div
-                className="col-lg-3 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <div className="member">
-                <Img src="assets/img/team/team-3.jpg"/>
-                  <div className="member-info">
-                    <div className="member-info-content">
-                      <h4>William Anderson</h4>
-                      <span>CTO</span>
-                      <div className="social">
-                        <a href="">
-                          <i className="bi bi-twitter-x"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-facebook"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-instagram"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-linkedin"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- End Team Member --> */}
-
-              <div
-                className="col-lg-3 col-md-6"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <div className="member">
-                <Img src="assets/img/team/team-4.jpg"/>
-                  <div className="member-info">
-                    <div className="member-info-content">
-                      <h4>Amanda Jepson</h4>
-                      <span>Accountant</span>
-                      <div className="social">
-                        <a href="">
-                          <i className="bi bi-twitter-x"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-facebook"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-instagram"></i>
-                        </a>
-                        <a href="">
-                          <i className="bi bi-linkedin"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- End Team Member --> */}
-            </div>
-          </div>
-        </section>
+        {/* <Team /> */}
         {/* <!-- /Team Section --> */}
 
         {/* <!-- Gallery Section --> */}
-        <section id="gallery" className="gallery section">
-          {/* <!-- Section Title --> */}
-          <div className="container section-title" data-aos="fade-up">
-            <h2>Gallery</h2>
-            <p>
-              Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-              consectetur velit
-            </p>
-          </div>
-          {/* <!-- End Section Title --> */}
-
-          <div
-            className="container-fluid"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div className="row g-0">
-              <div className="col-lg-3 col-md-4">
-                <div className="gallery-item">
-                  <a
-                    href="assets/img/gallery/gallery-1.jpg"
-                    className="glightbox"
-                    data-gallery="images-gallery"
-                  > 
-                   <Img  src="assets/img/gallery/gallery-1.jpg"/>
-                  </a>
-                </div>
-              </div>
-              {/* <!-- End Gallery Item --> */}
-
-              <div className="col-lg-3 col-md-4">
-                <div className="gallery-item">
-                  <a
-                    href="assets/img/gallery/gallery-2.jpg"
-                    className="glightbox"
-                    data-gallery="images-gallery"
-                  > 
-                   <Img  src="assets/img/gallery/gallery-2.jpg"/>
-                  </a>
-                </div>
-              </div>
-              {/* <!-- End Gallery Item --> */}
-
-              <div className="col-lg-3 col-md-4">
-                <div className="gallery-item">
-                  <a
-                    href="assets/img/gallery/gallery-3.jpg"
-                    className="glightbox"
-                    data-gallery="images-gallery"
-                  >
-                          <Img  src="assets/img/gallery/gallery-3.jpg"/>
-                  </a>
-                </div>
-              </div>
-              {/* <!-- End Gallery Item --> */}
-
-              <div className="col-lg-3 col-md-4">
-                <div className="gallery-item">
-                  <a
-                    href="assets/img/gallery/gallery-4.jpg"
-                    className="glightbox"
-                    data-gallery="images-gallery"
-                  >
-                            <Img  src="assets/img/gallery/gallery-4.jpg"/>
-                  </a>
-                </div>
-              </div>
-              {/* <!-- End Gallery Item --> */}
-
-              <div className="col-lg-3 col-md-4">
-                <div className="gallery-item">
-                  <a
-                    href="assets/img/gallery/gallery-5.jpg"
-                    className="glightbox"
-                    data-gallery="images-gallery"
-                  >
-                            <Img  src="assets/img/gallery/gallery-5.jpg"/>
-                  </a>
-                </div>
-              </div>
-              {/* <!-- End Gallery Item --> */}
-
-              <div className="col-lg-3 col-md-4">
-                <div className="gallery-item">
-                  <a
-                    href="assets/img/gallery/gallery-6.jpg"
-                    className="glightbox"
-                    data-gallery="images-gallery"
-                  >
-                           <Img  src="assets/img/gallery/gallery-6.jpg"/>
-                  </a>
-                </div>
-              </div>
-              {/* <!-- End Gallery Item --> */}
-
-              <div className="col-lg-3 col-md-4">
-                <div className="gallery-item">
-                  <a
-                    href="assets/img/gallery/gallery-7.jpg"
-                    className="glightbox"
-                    data-gallery="images-gallery"
-                  >
-                            <Img  src="assets/img/gallery/gallery-7.jpg"/>
-                  </a>
-                </div>
-              </div>
-              {/* <!-- End Gallery Item --> */}
-
-              <div className="col-lg-3 col-md-4">
-                <div className="gallery-item">
-                  <a
-                    href="assets/img/gallery/gallery-8.jpg"
-                    className="glightbox"
-                    data-gallery="images-gallery"
-                  >
-                          <Img  src="assets/img/gallery/gallery-8.jpg"/>
-                  </a>
-                </div>
-              </div>
-              {/* <!-- End Gallery Item --> */}
-            </div>
-          </div>
-        </section>
+        {/* <Gallery /> */}
         {/* <!-- /Gallery Section --> */}
 
         {/* <!-- Contact Section --> */}
@@ -882,15 +398,19 @@ export default function Home() {
           {/* <!-- Section Title --> */}
           <div className="container section-title" data-aos="fade-up">
             <h2>Contact</h2>
-            <p>
+            {/* <p>
               Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
               consectetur velit
-            </p>
+            </p> */}
           </div>
           {/* <!-- End Section Title --> */}
 
           <div className="container" data-aos="fade-up" data-aos-delay="100">
-            <div className="mb-4 border border-sky-200" data-aos="fade-up" data-aos-delay="200">
+            <div
+              className="mb-4 border border-sky-200"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
                 frameBorder="0"
@@ -925,7 +445,7 @@ export default function Home() {
                   <i className="bi bi-telephone flex-shrink-0"></i>
                   <div>
                     <h3>Call Us</h3>
-                    <p>+1 5589 55488 55</p>
+                    <p>+44 07943023656</p>
                   </div>
                 </div>
                 {/* <!-- End Info Item --> */}
@@ -938,7 +458,7 @@ export default function Home() {
                   <i className="bi bi-envelope flex-shrink-0"></i>
                   <div>
                     <h3>Email Us</h3>
-                    <p>info@example.com</p>
+                    <p>esthermbajiaku@gmail.com</p>
                   </div>
                 </div>
                 {/* <!-- End Info Item --> */}
@@ -1019,29 +539,26 @@ export default function Home() {
               <a href="index.html" className="logo d-flex align-items-center">
                 <span className="sitename">The Social Agency</span>
               </a>
-              <p>
-             Work with us and upscale your business.
-              </p>
-          
-            </div> 
+              <p>Let us help you grow online.</p>
+            </div>
 
             <div className="col-lg-2 col-6 footer-links">
               <h4>Our Services</h4>
-              <ul>
+              <ul> 
                 <li>
-                  <a href="#">Web Design</a>
+                  <a href="#">Social Media management</a>
                 </li>
                 <li>
-                  <a href="#">Web Development</a>
+                  <a href="#">Website</a>
                 </li>
                 <li>
-                  <a href="#">Product Management</a>
+                  <a href="#">Paid Ads</a>
                 </li>
                 <li>
-                  <a href="#">Marketing</a>
+                  <a href="#">Menu Designs</a>
                 </li>
                 <li>
-                  <a href="#">Graphic Design</a>
+                  <a href="#">Events</a>
                 </li>
               </ul>
             </div>
@@ -1049,17 +566,17 @@ export default function Home() {
             <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
               <h4>Contact Us</h4>
               <p>93 Beaumont Drive Gravesend</p>
-              <p>New York, NY 535022</p>
-              <p>United States</p>
+              {/* <p>New York, NY 535022</p> */}
+              <p>United Kingdom</p>
               <p className="mt-4">
-                <strong>Phone:</strong> <span>+44 7939663626</span>
+                <strong>Phone:</strong> <span>07943023656</span>
               </p>
               <p>
-                <strong>Email:</strong> <span>info@example.com</span>
+                <strong>Email:</strong> <span>esthermbajiaku@gmail.com</span>
               </p>
             </div>
           </div>
-        </div> 
+        </div>
       </footer>
 
       {/* <!-- Scroll Top --> */}
@@ -1072,10 +589,13 @@ export default function Home() {
       </a>
 
       {/* <!-- Preloader --> */}
-      <div id="preloader" style={{
-        transition: '0.45 ease',
-        display: showPreloader ? 'block' : 'none'
-      }}></div>
+      <div
+        id="preloader"
+        style={{
+          transition: "0.45 ease",
+          display: showPreloader ? "block" : "none",
+        }}
+      ></div>
     </div>
   );
 }

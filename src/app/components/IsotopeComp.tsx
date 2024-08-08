@@ -21,12 +21,11 @@ const IsotopeLayout = () => {
 
   // handling filter key change
   React.useEffect(() => {
-    if (filterKey === "*") isotope.current?.arrange({ filter: `*` });
+    if (filterKey === "*") isotope.current?.arrange({ filter: `*` })
     else isotope.current?.arrange({ filter: `.${filterKey}` });
   }, [filterKey]);
 
   const handleFilterKeyChange = (key: string) => () => setFilterKey(key);
-
   return (
     <> 
           <section id="portfolio" className="portfolio section">
@@ -48,7 +47,6 @@ const IsotopeLayout = () => {
                 <li data-filter=".filter-app" className={filterKey == "web-design" ? "filter-active": ""} onClick={handleFilterKeyChange("web-design")}>Web Design</li>
                 <li data-filter=".filter-product" className={filterKey == "product" ? "filter-active": ""} onClick={handleFilterKeyChange("product")}>Product</li>
                 <li data-filter=".filter-branding" className={filterKey == "branding" ? "filter-active": ""} onClick={handleFilterKeyChange("branding")}>Branding</li>
-              
               </ul>
           </div>
           {/* <!-- End Section Title --> */}
