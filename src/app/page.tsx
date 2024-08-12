@@ -566,14 +566,14 @@ We are interested in putting your brand in the spotlight and helping you reach y
 
             <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
               <h4>Contact Us</h4>
-              <p>93 Beaumont Drive Gravesend</p>
+              <p>London</p>
               {/* <p>New York, NY 535022</p> */}
               <p>United Kingdom</p>
               <p className="mt-4">
                 <strong>Phone:</strong> <span>07943023656</span>
               </p>
               <p>
-                <strong>Email:</strong> <span>esthermbajiaku@gmail.com</span>
+                <strong>Email:</strong> <span>esther@thesocialagency.link</span>
               </p>
             </div>
           </div>
