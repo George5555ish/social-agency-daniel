@@ -163,7 +163,7 @@ export default function Home() {
            </div>
             <h2
               className=""
-              style={{ fontSize: "50px", fontFamily: 'serif', fontWeight: "bold", color: "#fff" }}
+              style={{ fontSize: "50px",marginTop: '-100px', fontFamily: 'serif', fontWeight: "bold", color: "#fff" }}
             >
               HOSPITALITY SOCIAL MEDIA AGENCY
             </h2>
@@ -249,7 +249,7 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div className="row gy-4">
+            <div className="flex flex-row items-center justify-around">
               <div className="col-lg-3 col-md-6">
                 <div className="stats-item text-center">
                   {/* <span
@@ -293,18 +293,13 @@ export default function Home() {
               </div>
               {/* <!-- End Stats Item --> */}
 
-              <div className="col-lg-3 col-md-6">
+              {/* <div className="col-lg-3 col-md-6">
                 <div className="stats-item text-center w-100 h-100">
-                  {/* <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="32"
-                    data-purecounter-duration="1"
-                    className="purecounter"
-                  ></span> */}
+            
                   <CountUp end={5} />
                   <p>Workers</p>
                 </div>
-              </div>
+              </div> */}
               {/* <!-- End Stats Item --> */}
             </div>
           </div>
@@ -459,7 +454,7 @@ We are interested in putting your brand in the spotlight and helping you reach y
                   <i className="bi bi-envelope flex-shrink-0"></i>
                   <div>
                     <h3>Email Us</h3>
-                    <p>esthermbajiaku@gmail.com</p>
+                    <p>esther@thesocialagency.link</p>
                   </div>
                 </div>
                 {/* <!-- End Info Item --> */}
@@ -467,11 +462,7 @@ We are interested in putting your brand in the spotlight and helping you reach y
 
               <div className="col-lg-8">
                 <form
-                  action="mailto:esthermbajiaku@gmail.com"
-                  method="post"
-                  className="php-email-form"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
+                  action="mailto:esthermbajiaku@gmail.com" 
                 >
                   <div className="row gy-4">
                     <div className="col-md-6">
@@ -513,16 +504,17 @@ We are interested in putting your brand in the spotlight and helping you reach y
                         required={true}
                       ></textarea>
                     </div>
-
-                    <div className="col-md-12 text-center">
-                      <div className="loading">Loading</div>
-                      <div className="error-message"></div>
-                      <div className="sent-message">
-                        Your message has been sent. Thank you!
-                      </div>
+                    <div className="pb-8 mt-4 flex justify-center items-center">
+                  <button type="submit" 
+                    className="p-3 px-4 rounded-xl shadow-lg items-center justify-center border text-center font-bold text-sm bg-sky-500 text-white"
+                  >
+                    Submit
+                  </button>
+                </div>
+                    {/* <div className="col-md-12 text-center"> 
 
                       <button type="submit">Send Message</button>
-                    </div>
+                    </div> */}
                   </div>
                 </form>
               </div>
