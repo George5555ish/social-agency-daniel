@@ -161,12 +161,12 @@ export default function Home() {
               // style={{ marginLeft: "30px" }}
             />
            </div>
-            <h2
+            {/* <h2
               className="montserrat-heading"
               style={{ fontFamily: 'serif', fontWeight: "bold", color: "#fff" }}
             >
               HOSPITALITY SOCIAL MEDIA AGENCY
-            </h2>
+            </h2> */}
           </div>
           <video
             width="100%"
