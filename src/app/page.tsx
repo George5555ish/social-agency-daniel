@@ -162,8 +162,8 @@ export default function Home() {
             />
            </div>
             <h2
-              className=""
-              style={{ fontSize: "50px",marginTop: '-100px', fontFamily: 'serif', fontWeight: "bold", color: "#fff" }}
+              className="montserrat-heading"
+              style={{ fontFamily: 'serif', fontWeight: "bold", color: "#fff" }}
             >
               HOSPITALITY SOCIAL MEDIA AGENCY
             </h2>
