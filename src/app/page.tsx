@@ -63,7 +63,7 @@ export default function Home() {
         className="header d-flex align-items-center sticky-top"
       >
         <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-          <a href="index.html" className="logo d-flex align-items-center">
+          <a href="/" className="logo d-flex align-items-center">
             <img
               src="assets/img/social-agency-logo.svg"
               alt=""
@@ -152,7 +152,7 @@ export default function Home() {
             className="bg-none absolute top-0 left-0 w-full p-4 text-center justify-center align-center"
             data-aos="fade-up"
           >
-           <div className="flex align-center justify-center">
+           <div className="flex items-center justify-center">
            <img
               src="assets/img/social-agency-logo.svg"
               width={'800px'}
@@ -199,8 +199,8 @@ export default function Home() {
           }}
         >
           <div className="container ">
-            <div className="flex flex-col sm:flex-row items-center justify-center">
-              <div className="bg-none pr-24" data-aos="fade-up">
+            <div className="flex flex-col sm:flex-row items-center justify-center grow_online_div">
+              <div className="bg-none px-24" data-aos="fade-up">
                 <h2 className="text-center sm:text-left">
                  Let{"'"}s help you grow online!
                 </h2>
@@ -249,8 +249,8 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div className="flex flex-row items-center justify-around">
-              <div className="col-lg-3 col-md-6">
+            <div className="counter-div flex flex-col md:flex-row items-center justify-around">
+              <div className="">
                 <div className="stats-item text-center">
                   {/* <span
                     data-purecounter-start="0"
@@ -264,7 +264,7 @@ export default function Home() {
               </div>
               {/* <!-- End Stats Item --> */}
 
-              <div className="col-lg-3 col-md-6">
+              <div className="">
                 <div className="stats-item text-center w-100 h-100">
                   {/* <span
                     data-purecounter-start="0"
@@ -278,7 +278,7 @@ export default function Home() {
               </div>
               {/* <!-- End Stats Item --> */}
 
-              <div className="col-lg-3 col-md-6">
+              <div className="">
                 <div className="stats-item text-center w-100 h-100">
                   {/* <span
                     data-purecounter-start="0"
