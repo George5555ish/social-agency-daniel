@@ -454,15 +454,15 @@ We are interested in putting your brand in the spotlight and helping you reach y
                   <i className="bi bi-envelope flex-shrink-0"></i>
                   <div>
                     <h3>Email Us</h3>
-                    <p>esther@thesocialagency.link</p>
+                    <p>contact@thesocialagency.link</p>
                   </div>
                 </div>
                 {/* <!-- End Info Item --> */}
-              </div>
+              </div>    
 
               <div className="col-lg-8">
                 <form
-                  action="mailto:esthermbajiaku@gmail.com" 
+                  action="mailto:contact@thesocialagency.link" 
                 >
                   <div className="row gy-4">
                     <div className="col-md-6">
@@ -565,7 +565,7 @@ We are interested in putting your brand in the spotlight and helping you reach y
                 <strong>Phone:</strong> <span>07943023656</span>
               </p>
               <p>
-                <strong>Email:</strong> <span>esther@thesocialagency.link</span>
+                <strong>Email:</strong> <span>contact@thesocialagency.link</span>
               </p>
             </div>
           </div>
